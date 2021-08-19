@@ -42,22 +42,22 @@ export class GeneralComponent implements OnInit {
     this.userForm.reset();
   }
 
-  updateUser(id,i) {
+  updateUser(id, i) {
 
-    const newData={
-      id:id,
-      name:"Siddhesh Thipse",
-      username:"iamsid2399",
-      email:'siddheshthipse@gmail.com',
-      phone:'02138-280044',
-      website:'samplewebsite.com'
+    const newData = {
+      id: id,
+      name: "Siddhesh Thipse",
+      username: "iamsid2399",
+      email: 'siddheshthipse@gmail.com',
+      phone: '02138-280044',
+      website: 'samplewebsite.com'
     }
-    
-    this.store.dispatch(new UpdateUsers(newData, id,i));
+
+    this.store.dispatch(new UpdateUsers(newData, id, i));
   }
 
   deleteUser(i) {
-    console.log("The i value is:-",i);
+    console.log("The i value is:-", i);
     this.store.dispatch(new DeleteUsers(i));
   }
 }

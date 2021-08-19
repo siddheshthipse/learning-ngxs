@@ -1,52 +1,54 @@
 <div class="container-fluid">
-    <h2 style="text-decoration: underline;">Getting started with NGXS</h2>
-    <div class="row my-4">
-        <div class="col-md-3">
-            <h5 style="color: grey;">Add new user to State</h5>
-            <form [formGroup]="userForm" (ngSubmit)="addUser()">
-                <label class="form-label">ID</label>
-                <input type="text" class="form-control mb-2" placeholder="User ID"  formControlName="id">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control mb-2" placeholder="Enter Name" formControlName="name">
-                <label class="form-label">Username</label>
-                <input type="text" class="form-control mb-2" placeholder="Enter a unique username" formControlName="username">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control mb-2" placeholder="example@abcd.com" formControlName="email">
-                <label class="form-label">Phone</label>
-                <input type="number" class="form-control mb-2" placeholder="Enter Contact No." formControlName="phone">
-                <label class="form-label">Website</label>
-                <input type="email" class="form-control mb-2" placeholder="Enter website name" formControlName="website">
-                <button type="submit" class="btn btn-primary btn-sm mt-2">Add User</button>
-            </form>
-        </div>
-        <div class="col-md-9">
-            <h5 style="color: grey;">User Information</h5>
-            <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Website</th>
-                    <th scope="col">Update</th>
-                    <th scope="col">Delete</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngFor="let contents of userInfo; index as i">
-                    <th scope="row">{{contents.id}}</th>
-                    <td>{{contents.name}}</td>
-                    <td>{{contents.username}}</td>
-                    <td>{{contents.email}}</td>
-                    <td>{{contents.phone}}</td>
-                    <td>{{contents.website}}</td>
-                    <td><button class="btn btn-outline-warning btn-sm" (click)="updateUser(contents.id,i)"><i class="bi bi-pencil-fill"></i></button></td>
-                    <td><button class="btn btn-danger btn-sm" (click)="deleteUser(contents.id)"><i class="bi bi-trash-fill"></i></button></td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+  <h2 style="text-decoration: underline;">Getting started with NGXS</h2>
+  <div class="row my-4">
+    <div class="col-md-3">
+      <h5 style="color: grey;">Add new user to State</h5>
+      <form [formGroup]="userForm" (ngSubmit)="addUser()">
+        <label class="form-label">ID</label>
+        <input type="text" class="form-control mb-2" placeholder="User ID" formControlName="id">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control mb-2" placeholder="Enter Name" formControlName="name">
+        <label class="form-label">Username</label>
+        <input type="text" class="form-control mb-2" placeholder="Enter a unique username" formControlName="username">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control mb-2" placeholder="example@abcd.com" formControlName="email">
+        <label class="form-label">Phone</label>
+        <input type="number" class="form-control mb-2" placeholder="Enter Contact No." formControlName="phone">
+        <label class="form-label">Website</label>
+        <input type="email" class="form-control mb-2" placeholder="Enter website name" formControlName="website">
+        <button type="submit" class="btn btn-primary btn-sm mt-2">Add User</button>
+      </form>
     </div>
+    <div class="col-md-9">
+      <h5 style="color: grey;">User Information</h5>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Website</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let contents of userInfo; index as i">
+            <th scope="row">{{contents.id}}</th>
+            <td>{{contents.name}}</td>
+            <td>{{contents.username}}</td>
+            <td>{{contents.email}}</td>
+            <td>{{contents.phone}}</td>
+            <td>{{contents.website}}</td>
+            <td><button class="btn btn-outline-warning btn-sm" (click)="updateUser(contents.id,i)"><i
+                  class="bi bi-pencil-fill"></i></button></td>
+            <td><button class="btn btn-danger btn-sm" (click)="deleteUser(contents.id)"><i
+                  class="bi bi-trash-fill"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>

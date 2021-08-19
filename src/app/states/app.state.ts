@@ -3,7 +3,6 @@ import { Action, Selector, State, StateContext } from "@ngxs/store";
 import { DesignutilityService } from "../designutility.service";
 import { tap } from 'rxjs/operators';
 import { AddUsers, DeleteUsers, GetUsers, UpdateUsers } from "../actions/app.action";
-import { patch, append, removeItem, insertItem, updateItem } from '@ngxs/store/operators'
 
 export class UserStateModel {
     users: any
